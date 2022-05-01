@@ -9,7 +9,6 @@ Table of contents
   * [Summary](#Summary)
     * [Motivation](#Motivation)
   * [Description](#Description)
-    * [Block Diagram](#Block-Diagram)
     * [Layouts](#Layouts)
     * [Simulation Results](#Simulation-Results)
   * [Team Members](#Team-Members)  

@@ -61,10 +61,10 @@ Since the design includes on-chip ADCs for local digitization, this technique no
 For the implementation of the readout channel, the circuit consists of an integrator with an active filter, a Low-Pass Filter (LPF) which uses a Gm-C filter, and an active Correlated Double Sampling (CDS) for further amplification and noise rejection.
 
 During amplification sequence, the Analog Front-End (AFE)’s output and control signals, have four main phases:
--  Reset (Resetting the amplifiers)
--  Noise sample (A time interval to sample the existing noise before the integration)
--  Integration (A time interval for amplification and noise removal)
--  Readout sample (A time interval at the end of the integration phase to sample the input current)</br>
+1)  Reset (Resetting the amplifiers)
+2)  Noise sample (A time interval to sample the existing noise before the integration)
+3)  Integration (A time interval for amplification and noise removal)
+4)  Readout sample (A time interval at the end of the integration phase to sample the input current)</br>
 
 Next, samples are converted to their digital equivalent using the local ADCs and then  serially transmitted  to a memory before being fetched by the RISC-V BPU (based on the open-source Rocket architecture) to perform a basecalling algorithm (i.e., conversion of gathered samples to their nucleotide/base text equivalent) on them as depicted in Figure 3.
 

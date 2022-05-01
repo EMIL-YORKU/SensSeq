@@ -73,6 +73,7 @@ Next, samples are converted to their digital equivalent using the local ADCs and
 </p>
 <h4 align="center">Figure 3.An overview of the proposed system on chip (with only one measurement channel) for DNA sequencing, including Digital Read-Out circuity, a temporal memory and the RISC-V basecaller.</h4>
 
+
 The proposed DROIC, consumes an area of **_3×2 mm_<sup>2</sup>** with 30 parallel-operated channels. The size of each channel is **_320×220_ μm<sup>2</sup>** in 130-nm CMOS Technology. Besides, the respective chip size of BPU RISC-V core, I$, and D$ cache is about **_3.36×2.83 mm_<sup>2</sup>**, **_3.06×2.4 mm_<sup>2</sup>** and **_3.108×3.06 mm_<sup>2</sup>** in 130-nm CMOS.  The DROIC and BPU share approximately 332 I/O pads that their size is **0.3×0.27 mm<sup>2</sup>**. Figure. 4 illustrates the detailed sizing of the system, touched upon earlier.
   
 <p align="center">

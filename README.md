@@ -33,7 +33,9 @@ In order to test an on-chip circuits will be defined to generate the pico-ampere
 ### Motivation
 
 Nanopore-based DNA sequencing is a unique, scalable technology, utilized to identify nucleotides (i.e., A, C, G, T) according to the pico-ampere-sized current fluctuations induced by the passage of a DNA strand through a like-sized molecular sensor (i.e. a “nanopore”).   This approach, a so-called “3rd Generation” sequencing technology, entered the market in 2014, and is, by certain key measures, at least 1000X better than incumbent methods.  For example, its main components fit in the palm of one’s hand (a volumetric footprint about 1000X smaller than established machines) and it has demonstrated the ability to process contiguous DNA strands well in excess of 100,000 nucleotides in length.  
+
 Critical to the success and improvement of nanopore-based DNA sequencing machines are improvements in the semiconductor systems that process the pico-ampere-sized currents that they generate.  There are at least two key parts to this, i) a multi-channel digital readout integrated circuit (DROIC), that amplifies, filters, and digitizes the current measurements from multitudes of arrayed nanopore sensors, and ii) a bioinformatics processing unit (BPU) that processes the gathered data in order to extract biologically relevant information.
+
 In this proposal we endeavor to produce a chip that has both a DROIC and BPU in the same substrate.  The intent of this effort is to introduce a technology that, by virtue of even more aggressive miniaturization will make DNA sequencing more mobile, cheaper, and more applicable to a broader array of applications.
 
 

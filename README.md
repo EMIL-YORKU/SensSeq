@@ -9,7 +9,7 @@ Table of contents
 ==============================
 <!--ts-->
   * [Summary](#Summary)
-    * [Motivation](#Motivation)
+  * [Motivation](#Motivation)
   * [Description](#Description)
     * [Layouts](#Layouts)
     * [Simulation Results](#Simulation-Results)
@@ -30,7 +30,8 @@ This design contains a mixed-signal readout array and a Bioinformatics Processin
 
 In order to test an on-chip circuits will be defined to generate the pico-ampere currents. Also a timing technique will be used to seperate the digital and anlaog circuity opertion time.
  
-### Motivation
+Motivation
+=======
 
 Nanopore-based DNA sequencing is a unique, scalable technology, utilized to identify nucleotides (i.e., A, C, G, T) according to the pico-ampere-sized current fluctuations induced by the passage of a DNA strand through a like-sized molecular sensor (i.e. a “nanopore”).   This approach, a so-called “3rd Generation” sequencing technology, entered the market in 2014, and is, by certain key measures, at least 1000X better than incumbent methods.  For example, its main components fit in the palm of one’s hand (a volumetric footprint about 1000X smaller than established machines) and it has demonstrated the ability to process contiguous DNA strands well in excess of 100,000 nucleotides in length.  
 

@@ -41,11 +41,16 @@ Description
 This project introduces a system on chip (SOC) including a high-speed, low-power mixed-signal readout array (the DROIC), and a RISC-V microprocessor (the BPU) for analyzing the readout data. The proposed DROIC system consists of an array of channels, capable of simultaneous amplification, filtering, and digitization of pico-ampere range current signals with sufficient accuracy and speed. Figure 1 depicts the general manner of operation of nanopore-based sequencing (i.e., DNA moves through a nanopore protein and thus induces a small current signature indicative of the DNA’s make-up) and the key DROIC and BPU blocks that enable it.  The novelty of this design is the use of a new readout method in each channel to reduce power consumption compared to the previous works [1], [2], [3] as well as an in-pixel ADC, shown in Figure.2, to overcome substrate and switching noise. 
  
 
- ![image](./docs/pictures/figures/dnasns.png)
-Figure 1. A block diagram of the Nanopore Sensor, Analog and Digital Components.
+<p align="center">
+  <img src="https://github.com/EMIL-YORKU/SensSeq/tree/main/figures/dnasns.png?raw=true" alt="Sublime's custom image"/>
+</p> 
+<h4 align="center">Figure 1. A block diagram of the Nanopore Sensor, Analog and Digital Components.</h4>
+   
+
+
  
- ![image](./docs/pictures/figures/droic.png)
-Figure 2. A simplified block diagram of DROIC[4].
+ ![image](./figures/droic.png)
+<h4 align="center">Figure 2. A simplified block diagram of DROIC[4].</h4>
 
 Since the design includes on-chip ADCs for local digitization, this technique not only minimizes the distance over which analog data needs to be transported, but more importantly, makes the design more flexible for scaling up to hundreds of channels. Moreover, by using low-power, simpler design, the consumed area has been dramatically reduced, a step towards highly integrated arrays and, we anticipate, substantially miniaturized DNA sequencers.
 For the implementation of the readout channel, the circuit consists of an integrator with an active filter, a Low-Pass Filter (LPF) which uses a Gm-C filter, and an active Correlated Double Sampling (CDS) for further amplification and noise rejection.
@@ -58,33 +63,35 @@ During amplification sequence, the Analog Front-End (AFE)’s output and control
 
 Next, samples are converted to their digital equivalent using the local ADCs and then  serially transmitted  to a memory before being fetched by the RISC-V BPU (based on the open-source Rocket architecture) to perform a basecalling algorithm (i.e., conversion of gathered samples to their nucleotide/base text equivalent) on them as depicted in Figure 3.
  
- ![image](./docs/pictures/figures/soc.png)
-Figure 3.An overview of the proposed system on chip (with only one measurement channel) for DNA sequencing, including Digital Read-Out circuity, a temporal memory and the RISC-V basecaller.
+ ![image](./figures/soc.png)
+
+    Figure 3.An overview of the proposed system on chip (with only one measurement channel) for DNA sequencing, including Digital Read-Out circuity, a temporal memory and the RISC-V basecaller.
 
 The proposed DROIC, consumes an area of 3×2 mm^2 with 30 parallel-operated channels. The size of each channel is 320×220 〖μm〗^2 in 130-nm CMOS Technology. Besides, the respective chip size of BPU RISC-V core, I$, and D$ cache is about 3.36×2.83 mm^2, 3.06×2.4 mm^2 and 3.108×3.06 mm^2 in 130-nm CMOS.  The DROIC and BPU share approximately 332 I/O pads that their size is 0.3×0.27 mm^2. Figure. 4 illustrates the detailed sizing of the system, touched upon earlier.
   
-  ![image](./docs/pictures/figures/sizes.png)
-Figure 4. Layout and sizing of the nanopore array.
+  ![image](./figures/sizes.png)
+
+    Figure 4. Layout and sizing of the nanopore array.
 
 
 ### Layouts
 
 
 #### DROIC
-![image](./docs/pictures/layouts/droic.png)
+![image](./layouts/droic.png)
 
 #### RISCV-BPU
-![image](./docs/pictures/layouts/bpu.png)
+![image](./layouts/bpu.png)
 
 
 ---
 ### Simulation Results
 
 Droic
-![image](./docs/pictures/layouts/droic-res.png)
+![image](./layouts/droic-res.png)
 
 BPU
-![image](./docs/pictures/layouts/bpu-res.png)
+![image](./layouts/bpu-res.png)
 
 ### Design Goals
 The ultimate goal of this project is to integrate and fabricate the scalable  DROIC and the BPU onto a single  die to perform the DNA sequencing. By doing so, the time-consuming and costly arrangements  for processing, testing and verifying the readout data would be avoided. This  includes several tools and external hardware; hence, there will be a considerable reduction in  costs.
@@ -94,8 +101,9 @@ Utilization of this new system will result in immense savings, as the previous m
 The fabrication of the proposed system will open new doors in future development and design of low-power, scalable DNA sequencing systems.
 
 
- ![image](./docs/pictures/figures/flow.png)
-Figure 5. The diagram of a semi-sleep RISC-V processor. 
+ ![image](./figures/flow.png)
+   
+ Figure 5. The diagram of a semi-sleep RISC-V processor. 
 
 
 Team members

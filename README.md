@@ -13,6 +13,7 @@ Table of contents
   * [Description](#Description)
     * [Layouts](#Layouts)
     * [Simulation Results](#Simulation-Results)
+  * [Design Goals](#Design-Goals)
   * [Team Members](#Team-Members)  
   * [References](#References)
 <!--te-->
@@ -101,7 +102,9 @@ Droic
 BPU
 ![image](./layouts/bpu-res.png)
 
-### Design Goals
+Design Goals
+=======
+
 The ultimate goal of this project is to integrate and fabricate the scalable  DROIC and the BPU onto a single  die to perform the DNA sequencing. By doing so, the time-consuming and costly arrangements  for processing, testing and verifying the readout data would be avoided. This  includes several tools and external hardware; hence, there will be a considerable reduction in  costs.
 
 Integrating the RISC-V BPU and the ultra-sensitive discrete-time DROIC amplifiers will be a major contribution to the academia as well as the industry. To achieve this, a semi-sleep processor scheme has been proposed to cope with the noise disturbance of the processor, which will be placed in the far distance from the noise-prone amplifiers.  While the channels are sampling, ADCs and any RISC-V chip need to be quiet. Then, once the channels are sampled and stored in a temporal memory, readout sampling will be stopped and immediately, the clock will become online to  enable the   ADCs to digitize the samples and the RISC-V BPU to determine the order of the four DNA bases, namely, A, C, T and G. The DNA input current sampling step will start again when the processor issues the done signal. This cyclic behavior of the system will be repeated until the complete DNA sequence is identified. Figure. 5. depicts the above process. 

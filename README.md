@@ -12,7 +12,6 @@ Table of contents
   * [Motivation](#Motivation)
   * [Description](#Description)
     * [Layouts](#Layouts)
-    * [Simulation Results](#Simulation-Results)
   * [Design Goals](#Design-Goals)
   * [Team Members](#Team-Members)  
   * [References](#References)
@@ -87,20 +86,12 @@ The proposed DROIC, consumes an area of **_3×2 mm_<sup>2</sup>** with 30 parall
 
 
 #### DROIC
-![image](./layouts/droic.png)
+![image](./layouts/dro.png)
 
 #### RISCV-BPU
 ![image](./layouts/bpu.png)
 
 
----
-### Simulation Results
-
-Droic
-![image](./layouts/droic-res.png)
-
-BPU
-![image](./layouts/bpu-res.png)
 
 Design Goals
 =======

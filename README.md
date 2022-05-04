@@ -86,7 +86,7 @@ The proposed DROIC, consumes an area of **_3×2 mm_<sup>2</sup>** with 30 parall
 
 
 #### DROIC
-![image](./layouts/dro.png)
+![image](./layouts/dro.PNG)
 
 #### RISCV-BPU
 ![image](./layouts/bpu.png)
